@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    PROJECT
+        Name
+            Docutations
+        
+        Code Version
+            1.0
+        
+        Description
+            Provides code documentative annotations.
+        
+    COPYRIGHTS
+        Copyright (C) 2015 by Natusoft AB All rights reserved.
+        
+    LICENSE
+        ASF 2.0 (Open Source)
+        
+        
+    AUTHORS
+        tommy ()
+            Changes:
+            2015-10-24: Created!
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,5 +33,183 @@
     <artifactId>docutations</artifactId>
     <version>1.0</version>
 
+    <name>Docutations</name>
 
+    <description>
+        Provides code documentative annotations.
+    </description>
+
+    <licenses>
+        <license>
+            <name>ASF-2.0</name>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Natusoft AB</name>
+    </organization>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <properties>
+        <clm.ver>2.1.6</clm.ver>
+    </properties>
+
+    <build>
+        <plugins>
+            <!--
+                Copy relevant license files to target on install.
+            -->
+            <plugin>
+                <groupId>se.natusoft.tools.codelicmgr</groupId>
+                <artifactId>CodeLicenseManager-maven-plugin</artifactId>
+                <version>${clm.ver}</version>
+
+                <dependencies>
+                    <dependency>
+                        <groupId>se.natusoft.tools.codelicmgr</groupId>
+                        <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
+                        <version>${clm.ver}</version>
+                    </dependency>
+                </dependencies>
+
+                <executions>
+                    <execution>
+                        <id>install-licence-info</id>
+                        <goals>
+                            <goal>install</goal>
+                        </goals>
+                        <phase>install</phase>
+                        <configuration>
+
+                            <installOptions>
+                                <verbose>true</verbose>
+                                <licenseDir>target/license</licenseDir>
+                                <thirdpartyLicenseDir>target/license/thirdparty</thirdpartyLicenseDir>
+                            </installOptions>
+
+                            <!--
+                                Here we add those that are not auto resolved.
+                            -->
+                            <thirdpartyLicenses>
+                                <license>
+                                    <type>OSGi</type>
+                                    <version>2.0</version>
+                                    <licenseProducts>
+                                        <product>
+                                            <name>org.osgi.compendium-4.2.0</name>
+                                            <web>http://www.osgi.org/</web>
+                                        </product>
+                                        <product>
+                                            <name>org.osgi.core-4.2.0</name>
+                                            <web>http://www.osgi.org/</web>
+                                        </product>
+                                    </licenseProducts>
+                                </license>
+                                <!--
+                                    This one is not available in a maven repository so it is included
+                                    under /lib. It is only used when building.
+                                -->
+                                <license>
+                                    <type>GPL</type>
+                                    <version>v2</version>
+                                    <licenseProducts>
+                                        <product>
+                                            <name>MarkdownDoclet-3.0</name>
+                                            <web>http://code.google.com/p/markdown-doclet/</web>
+                                        </product>
+                                    </licenseProducts>
+                                </license>
+                            </thirdpartyLicenses>
+
+                            <createLicensesMarkdown>true</createLicensesMarkdown>
+                            <markdownTargetSubdir>lics</markdownTargetSubdir>
+                            <markdownLinkPrefix>https://github.com/tombensve/APS/blob/master/lics/</markdownLinkPrefix>
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>apply-license-info</id>
+            <build>
+                <plugins>
+                    <plugin>
+
+                        <groupId>se.natusoft.tools.codelicmgr</groupId>
+                        <artifactId>CodeLicenseManager-maven-plugin</artifactId>
+                        <version>${clm.ver}</version>
+
+                        <dependencies>
+                            <dependency>
+                                <groupId>se.natusoft.tools.codelicmgr</groupId>
+                                <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
+                                <version>${clm.ver}</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>se.natusoft.tools.codelicmgr</groupId>
+                                <artifactId>CodeLicenseManager-source-updater-slashstar-comment</artifactId>
+                                <version>${clm.ver}</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>se.natusoft.tools.codelicmgr</groupId>
+                                <artifactId>CodeLicenseManager-source-updater-html-xml</artifactId>
+                                <version>${clm.ver}</version>
+                            </dependency>
+                        </dependencies>
+
+                        <configuration>
+                            <project>
+                                <codeVersion>${project.version}</codeVersion>
+                                <name>${project.name}</name>
+                                <description>${project.description}</description>
+                            </project>
+                            <!-- All options are optional. -->
+                            <codeOptions>
+                                <verbose>true</verbose>
+                                <!-- If not set uses extension on source file to resolve. -->
+                                <codeLanguage><!-- by source extension. -->
+                                </codeLanguage>
+                                <!-- If true updates the license information in source code. -->
+                                <updateLicenseInfo>true</updateLicenseInfo>
+                                <!-- If true updates the copyright information in source code. -->
+                                <updateCopyright>true</updateCopyright>
+                                <!-- If true updates the project information in source code. -->
+                                <updateProject>true</updateProject>
+                                <!-- If true will add authors information to source files that does not have it. This is not always implemented! -->
+                                <addAuthorsBlock>true</addAuthorsBlock>
+                                <!-- The directories to scan for source code to update with project & license information. -->
+                                <sourceCodeDirs>
+                                    src/main/java/**/.*.java,
+                                    pom.xml
+                                </sourceCodeDirs>
+
+                            </codeOptions>
+
+                            <userData>
+                                <!--name></name>
+                                <value></value-->
+                            </userData>
+
+                        </configuration>
+
+                        <executions>
+                            <execution>
+                                <id>apply-licence-info</id>
+                                <goals>
+                                    <goal>apply</goal>
+                                </goals>
+                                <phase>generate-sources</phase>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

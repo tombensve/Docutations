@@ -1,4 +1,29 @@
-package org.oppenkod.docutations;
+/* 
+ * 
+ * PROJECT
+ *     Name
+ *         Docutations
+ *     
+ *     Code Version
+ *         1.0
+ *     
+ *     Description
+ *         Provides code documentative annotations.
+ *         
+ * COPYRIGHTS
+ *     Copyright (C) 2015 by Natusoft AB All rights reserved.
+ *     
+ * LICENSE
+ *     ASF 2.0 (Open Source)
+ *     
+ *     
+ * AUTHORS
+ *     tommy ()
+ *         Changes:
+ *         2015-10-24: Created!
+ *         
+ */
+package se.natusoft.docutations;
 
 import java.lang.annotation.*;
 
@@ -7,7 +32,7 @@ import java.lang.annotation.*;
  * are not modified by the method. In reality the parameter is inhibited to be reset to another instance within
  * the method. It does not stop the contents of an object to be modified by calling methods on it. It only
  * guarantees that you will have access to the original passed parameter within the whole method.
- * <p/>
+ * <p>
  * I don't feel using final to mean unmodified is clear enough, so I've created @Modified and @NotModified
  * annotations to document this behavior instead.
  */
