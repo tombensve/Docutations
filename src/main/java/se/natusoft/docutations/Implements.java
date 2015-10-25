@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,20 +21,20 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
 import java.lang.annotation.*;
 
 /**
- * This annotation indicates that the annotated item can be null.
+ * This is an alternative/addition to @Override when used to point out implementation of interface and
+ * also provides what interface is being implemented.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Target({ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.CONSTRUCTOR, ElementType.LOCAL_VARIABLE})
-public @interface Nullable {
-    /** If you want to say something ... */
-    String value() default "";
+@Target({ElementType.METHOD})
+public @interface Implements {
+    Class[] api();
 }

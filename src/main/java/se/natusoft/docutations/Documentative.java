@@ -5,7 +5,7 @@
  *         Docutations
  *     
  *     Code Version
- *         1.0
+ *         1.1
  *     
  *     Description
  *         Provides code documentative annotations.
