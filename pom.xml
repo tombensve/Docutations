@@ -6,7 +6,7 @@
             Docutations
         
         Code Version
-            1.1
+            1.2
         
         Description
             Provides code documentative annotations.
@@ -31,7 +31,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <name>Docutations</name>
 
