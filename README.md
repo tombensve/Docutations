@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.0
+__Version:__ 2.0.1
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -20,5 +20,9 @@ intention is to clarify code.
 Removed @NotNull and @Nullable and added a dependency to jetbrains-annotations instead. jetbrains-annotations provide these 2 and if you are working in IntelliJ IDEA then it will make use of those annotations to show potential errors. If you do not use IDEA then they will have the same functionality as mine did.
 
 This is of course not backwards compatible, which is why I bumped the version to 2.0.
+
+### 2.0.1
+
+Added @NotUsed. I had an interface implementation method that received 2 parameters of which I only actually made use of one, and thus wanted to mark the other as not used.
 
 [Javadoc](http://apidoc.natusoft.se/Docutations/)
