@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,7 +21,7 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
@@ -30,13 +30,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * This documents an issue.
+ * Synonym for @Issue.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
-public @interface Issue {
+public @interface Bug {
     /** The id of the issue. */
     String id();
 

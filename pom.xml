@@ -4,20 +4,20 @@
     PROJECT
         Name
             Docutations
-
+        
         Code Version
-            1.2
-
+            2.1
+        
         Description
             Provides code documentative annotations.
-
+        
     COPYRIGHTS
         Copyright (C) 2015 by Natusoft AB All rights reserved.
-
+        
     LICENSE
         ASF 2.0 (Open Source)
-
-
+        
+        
     AUTHORS
         tommy ()
             Changes:
@@ -31,7 +31,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>2.0.1</version>
+    <version>2.1</version>
 
     <name>Docutations</name>
 
@@ -54,14 +54,6 @@
     <properties>
         <clm.ver>2.1.6</clm.ver>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>15.0</version>
-        </dependency>
-    </dependencies>
 
     <distributionManagement>
         <repository>
@@ -118,6 +110,23 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!--
+                Package sources.
+            -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

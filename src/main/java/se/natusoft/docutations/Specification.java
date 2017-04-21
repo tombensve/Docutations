@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,7 +21,7 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
@@ -30,28 +30,17 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * This documents an issue.
+ * This indicates a specification that the code adheres to.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
-public @interface Issue {
-    /** The id of the issue. */
-    String id();
+public @interface Specification {
 
-    /** A description.  */
-    String[] description() default {};
+    /** The version value. */
+    String name();
 
-    /** The priority of the issue. */
-    String priority() default "";
-
-    /** The state of the issue. */
-    String state() default "";
-
-    /** An url or some reference to the issue tracker where the issue can be found. */
-    String url() default "";
-
-    /** Reference to other info. */
-    String see() default "";
+    /** The version of the specification. */
+    String version() default "";
 }
