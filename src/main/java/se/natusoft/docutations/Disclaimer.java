@@ -25,16 +25,17 @@
  */
 package se.natusoft.docutations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * Indicates that the annotated item can be null.
+ * This annotation is used for special notes.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Note("All targets!")
-public @interface Nullable {
-    /** If you want to say something ... */
-    String value() default "";
+@Disclaimer("All targets!")
+public @interface Disclaimer {
+    String[] value() default {};
 }

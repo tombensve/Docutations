@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.1
+__Version:__ 2.2
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -15,15 +15,9 @@ intention is to clarify code.
 
 ## History
 
-### 2.0
+### 2.2
 
-Removed `@NotNull` and `@Nullable` and added a dependency to jetbrains-annotations instead. jetbrains-annotations provide these 2 and if you are working in IntelliJ IDEA then it will make use of those annotations to show potential errors. If you do not use IDEA then they will have the same functionality as mine did.
-
-This is of course not backwards compatible, which is why I bumped the version to 2.0.
-
-### 2.0.1
-
-Added `@NotUsed`. I had an interface implementation method that received 2 parameters of which I only actually made use of one, and thus wanted to mark the other as not used.
+Realized that I wanted to use `@NotNull` for the return value of a method, but my `@Target` specification for the annotation did not allow that. These are only for documentative purposes and limiting where they can be used are really stupid! __All__ annotations can now be used anywhere annotations are allowed by Java.
 
 ### 2.1
 
@@ -31,5 +25,16 @@ Added `@NotUsed`. I had an interface implementation method that received 2 param
 
 - Added some new annotations: `@Bug`, `@Specification`, `@Task`, `@Todo`, `@Version`.
    - `@Bug` and `@Task` are synonyms for `@Issue`.
+
+### 2.0.1
+
+Added `@NotUsed`. I had an interface implementation method that received 2 parameters of which I only actually made use of one, and thus wanted to mark the other as not used.
+
+### 2.0
+
+Removed `@NotNull` and `@Nullable` and added a dependency to jetbrains-annotations instead. jetbrains-annotations provide these 2 and if you are working in IntelliJ IDEA then it will make use of those annotations to show potential errors. If you do not use IDEA then they will have the same functionality as mine did.
+
+This is of course not backwards compatible, which is why I bumped the version to 2.0.
+
 
 [Javadoc](http://apidoc.natusoft.se/Docutations/)

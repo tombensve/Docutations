@@ -3,20 +3,20 @@
  * PROJECT
  *     Name
  *         Docutations
- *     
+ *
  *     Code Version
  *         2.1
- *     
+ *
  *     Description
  *         Provides code documentative annotations.
- *         
+ *
  * COPYRIGHTS
  *     Copyright (C) 2015 by Natusoft AB All rights reserved.
- *     
+ *
  * LICENSE
  *     ASF 2.0 (Open Source)
- *     
- *     
+ *
+ *
  * AUTHORS
  *     tommy ()
  *         Changes:
@@ -33,6 +33,5 @@ import java.lang.annotation.*;
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Target({ElementType.TYPE, ElementType.CONSTRUCTOR, ElementType.FIELD, ElementType.LOCAL_VARIABLE, ElementType.METHOD,
-        ElementType.PACKAGE, ElementType.PARAMETER})
+@Note("All targets!")
 public @interface Required {}

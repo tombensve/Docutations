@@ -33,7 +33,7 @@ import java.lang.annotation.*;
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Target({ElementType.LOCAL_VARIABLE, ElementType.PARAMETER, ElementType.FIELD})
+@Note("All targets!")
 public @interface NotNull {
     /** If you want to say something ... */
     String value() default "";
