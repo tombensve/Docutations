@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.2
+__Version:__ 2.3
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -14,6 +14,16 @@ This is a set of annotations for the purpose of documenting code. They provide n
 intention is to clarify code.
 
 ## History
+
+### 2.3
+
+Got quite tired of IDEA and JetBrains and added `@IDEAFail` and `@JustIgnore`.
+
+I have to admit though that even with all its fails and bad support it still beats NetBeans, and Eclipse.
+For something I do pay quite a lot of money for, I do expect professional support, which is delivered
+less and less.
+
+I do love their YouTrack, which I pay for also. And YouTrack still fully works!
 
 ### 2.2
 
