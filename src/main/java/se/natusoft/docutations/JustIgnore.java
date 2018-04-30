@@ -1,3 +1,28 @@
+/* 
+ * 
+ * PROJECT
+ *     Name
+ *         Docutations
+ *     
+ *     Code Version
+ *         2.4
+ *     
+ *     Description
+ *         Provides code documentative annotations.
+ *         
+ * COPYRIGHTS
+ *     Copyright (C) 2015 by Natusoft AB All rights reserved.
+ *     
+ * LICENSE
+ *     ASF 2.0 (Open Source)
+ *     
+ *     
+ * AUTHORS
+ *     tommy ()
+ *         Changes:
+ *         2018-04-30: Created!
+ *         
+ */
 package se.natusoft.docutations;
 
 import java.lang.annotation.*;

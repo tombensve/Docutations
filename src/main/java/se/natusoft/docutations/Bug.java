@@ -5,7 +5,7 @@
  *         Docutations
  *     
  *     Code Version
- *         2.1
+ *         2.4
  *     
  *     Description
  *         Provides code documentative annotations.
@@ -36,6 +36,7 @@ import java.lang.annotation.RetentionPolicy;
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
+@Synonymous("@Issue")
 public @interface Bug {
     /** The id of the issue. */
     String id();

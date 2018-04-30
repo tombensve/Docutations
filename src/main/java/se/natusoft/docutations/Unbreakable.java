@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,7 +21,7 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
@@ -30,12 +30,17 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * This annotation indicates that something is important.
+ * This indicates that something cannot fail or that it will always return without ever
+ * throwing an exception.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Important("All targets!")
-public @interface Important {
+@Note("All targets!")
+@Synonymous("@FailSafe")
+public @interface Unbreakable {
+
+    /** A description.  */
     String[] value() default {};
+
 }

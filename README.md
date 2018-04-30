@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.3
+__Version:__ 2.4
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -14,6 +14,15 @@ This is a set of annotations for the purpose of documenting code. They provide n
 intention is to clarify code.
 
 ## History
+
+### 2.4
+
+Added:
+
+  * `@FailSafe`
+  * `@Unbreakable`
+  * `@Synonymous`
+  * `@DeprecationInfo` 
 
 ### 2.3
 

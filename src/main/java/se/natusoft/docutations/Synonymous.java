@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,7 +21,7 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
@@ -30,12 +30,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * This annotation indicates that something is important.
+ * This indicates that what is annotated is synonymous with something else.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Important("All targets!")
-public @interface Important {
+@Note("All targets!")
+public @interface Synonymous {
+
+    /** A description.  */
     String[] value() default {};
+
 }

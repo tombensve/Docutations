@@ -1,11 +1,11 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
  *     
  *     Code Version
- *         2.1
+ *         2.4
  *     
  *     Description
  *         Provides code documentative annotations.
@@ -21,7 +21,7 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
@@ -36,6 +36,7 @@ import java.lang.annotation.RetentionPolicy;
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
+@Synonymous("@Bug")
 public @interface Issue {
     /** The id of the issue. */
     String id();
