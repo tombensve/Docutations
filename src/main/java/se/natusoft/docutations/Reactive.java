@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -20,21 +20,23 @@
  * AUTHORS
  *     tommy ()
  *         Changes:
- *         2018-04-30: Created!
- *         
+ *         2015-10-24: Created!
+ *
  */
 package se.natusoft.docutations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * Tell the code reader to just ignore whatever is annotated. Works well in conjunction with @IDEAFail.
+ * Indicates that the annotated item is using reactive API (inspired by Vert.x).
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
-public @interface JustIgnore {
+public @interface Reactive {
     /** If you want to say something ... */
     String value() default "";
 }
