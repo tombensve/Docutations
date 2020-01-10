@@ -148,11 +148,11 @@
                     <plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <configuration>
-                            <doclet>ch.raffael.doclets.pegdown.PegdownDoclet</doclet>
+                            <doclet>ch.raffael.mddoclet.MarkdownDoclet</doclet>
                             <docletArtifact>
-                                <groupId>ch.raffael.pegdown-doclet</groupId>
-                                <artifactId>pegdown-doclet</artifactId>
-                                <version>1.2</version>
+                                <groupId>ch.raffael.markdown-doclet</groupId>
+                                <artifactId>markdown-doclet</artifactId>
+                                <version>1.4</version>
                             </docletArtifact>
                             <useStandardDocletOptions>true</useStandardDocletOptions>
                         </configuration>
@@ -162,21 +162,21 @@
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
-                                <phase>deploy</phase>
+                                <phase>package</phase>
                             </execution>
                             <execution>
                                 <id>gendocs</id>
                                 <goals>
                                     <goal>javadoc</goal>
                                 </goals>
-                                <phase>deploy</phase>
+                                <phase>package</phase>
                             </execution>
                             <execution>
                                 <id>jar-javadoc</id>
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
-                                <phase>deploy</phase>
+                                <phase>package</phase>
                                 <configuration>
                                     <attach>true</attach>
                                 </configuration>
