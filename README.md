@@ -38,7 +38,7 @@ I have to admit though that even with all its fails and bad support it still bea
 For something I do pay quite a lot of money for, I do expect professional support, which is delivered
 less and less.
 
-I do love their YouTrack, which I pay for also. And YouTrack still fully works!
+I do love their YouTrack. And YouTrack still fully works!
 
 ### 2.2
 
