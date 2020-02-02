@@ -1,5 +1,5 @@
-/* 
- * 
+/*
+ *
  * PROJECT
  *     Name
  *         Docutations
@@ -21,22 +21,20 @@
  *     tommy ()
  *         Changes:
  *         2015-10-24: Created!
- *         
+ *
  */
 package se.natusoft.docutations;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.*;
 
 /**
- * This indicates that the item annotated with this is a workaround.
+ * This annotation indicates that a class is dependency injected which means that setters or private fields
+ * are not always provided with a value in a way an IDE can see.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-@Note("All targets!")
-public @interface Workaround {
-    /** If you want to say something ... */
-    String value() default "";
+@Target( ElementType.TYPE )
+public @interface DependencyInjected {
+    String[] value() default {};
 }

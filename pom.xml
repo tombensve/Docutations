@@ -4,20 +4,20 @@
     PROJECT
         Name
             Docutations
-        
+
         Code Version
-            2.5
-        
+            2.6
+
         Description
             Provides code documentative annotations.
-        
+
     COPYRIGHTS
         Copyright (C) 2015 by Natusoft AB All rights reserved.
-        
+
     LICENSE
         ASF 2.0 (Open Source)
-        
-        
+
+
     AUTHORS
         tommy ()
             Changes:
@@ -31,7 +31,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>2.5</version>
+    <version>2.6</version>
 
     <name>Docutations</name>
 
@@ -65,15 +65,17 @@
 
     <build>
         <plugins>
-			
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
+<!--            Must be built with a JDK 8! This commented out configuration is required for >8.
                 <configuration>
                     <release>8</release>
                 </configuration>
+-->
             </plugin>
-			
+
             <!--
                 Copy relevant license files to target on install.
             -->
@@ -125,6 +127,7 @@
             -->
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>

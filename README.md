@@ -15,9 +15,17 @@ intention is to clarify code.
 
 ## History
 
+### 2.6
+
+Added:
+
+   * `@AutoInstantiated`
+   * `@DependencyInjected`
+
 ### 2.5
 
 Added:
+
    * `@Reactive`
    * `@Fluent`
 
@@ -28,7 +36,7 @@ Added:
   * `@FailSafe`
   * `@Unbreakable`
   * `@Synonymous`
-  * `@DeprecationInfo` 
+  * `@DeprecationInfo`
 
 ### 2.3
 
