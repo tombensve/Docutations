@@ -13,7 +13,16 @@ __License:__ [ASF-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 This is a set of annotations for the purpose of documenting code. They provide no functionality, their only
 intention is to clarify code.
 
+I am personally no longer using @Reactive and @Fluent. They were
+inspired by Vert.x, but I don't consider that information to be important enough to actually point out. If an API is reactive or fluent is quite clear by just looking at it. I however left the annotations to not break anything (like I in 2.0 which did break usage of Docutations variants of @NotNull @Nullable).
+
 ## History
+
+### 2.7
+
+Added `@Concurrent`
+
+This can for example be used on a method that is always called concurrently from whatever calls it, like submitted to a thread pool or whatever, just to clarify that is is called in a concurrent context.
 
 ### 2.6
 
