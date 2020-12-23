@@ -18,6 +18,15 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 ## History
 
+### 2.8
+
+Added: 
+
+   * `@Teching`
+   * `@Feedback`
+   
+2 alternatives for basically the same thing.
+
 ### 2.7
 
 Added `@Concurrent`
