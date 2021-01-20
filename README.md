@@ -18,6 +18,17 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 ## History
 
+### 2.9
+
+Added:
+
+   * `@Requirement` 
+
+Modified:
+
+   * `@Specification` - Added `url` to point to a web documentation.
+
+
 ### 2.8
 
 Added: 

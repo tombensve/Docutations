@@ -30,20 +30,19 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * This indicates a specification that the code adheres to.
+ * This references the development requirement that the annotated code belongs to.
+ *
+ * Kind of similar to Specification.
  */
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
 @Note("All targets!")
-public @interface Specification {
+public @interface Requirement {
 
-    /** The version value. */
-    String name() default "";
+    /** Some reference to the requirement. */
+    String ref() default "";
 
-    /** The version of the specification. */
-    String version() default "";
-
-    /** URL to specification on web. */
+    /** URL to requirement description on the web.. */
     String url() default "";
 }
