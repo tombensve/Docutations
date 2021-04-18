@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.9
+__Version:__ 2.10
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -17,6 +17,13 @@ I am personally no longer using @Reactive and @Fluent. They were
 inspired by Vert.x, but I don't consider that information to be important enough to actually point out. If an API is reactive or fluent is quite clear by just looking at it. I however left the annotations to not break anything (like I in 2.0 which did break usage of Docutations variants of @NotNull @Nullable).
 
 ## History
+
+### 2.10
+
+Added: 
+
+   * `@Old`
+   * `@Temporary`
 
 ### 2.9
 
