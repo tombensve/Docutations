@@ -16,6 +16,12 @@ intention is to clarify code.
 I am personally no longer using @Reactive and @Fluent. They were
 inspired by Vert.x, but I don't consider that information to be important enough to actually point out. If an API is reactive or fluent is quite clear by just looking at it. I however left the annotations to not break anything (like I in 2.0 which did break usage of Docutations variants of @NotNull @Nullable).
 
+# Binaries
+
+[Accessing binaries](https://github.com/tombensve/CommonStuff/blob/master/docs/AccessingBinaries.md)
+
+----
+
 ## History
 
 ### 2.9
