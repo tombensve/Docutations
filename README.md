@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.10
+__Version:__ 2.11
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 ## History
+
+## 2.11
+
+Added: `MisspelledInSpecification`
 
 ### 2.10
 

@@ -31,7 +31,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>2.10</version>
+    <version>2.11</version>
 
     <name>Docutations</name>
 
@@ -50,10 +50,6 @@
     </organization>
 
     <inceptionYear>2015</inceptionYear>
-
-    <properties>
-        <clm.ver>2.1.6</clm.ver>
-    </properties>
 
     <scm>
         <connection>scm:git:git@github.com:tombensve/Docutations.git</connection>
@@ -94,29 +90,35 @@
 
         <plugins>
 
+            <!--
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
-<!--            Must be built with a JDK 8! This commented out configuration is required for >8.
                 <configuration>
                     <release>8</release>
                 </configuration>
--->
             </plugin>
-
-            <!--
-                Copy relevant license files to target on install.
             -->
+            <!--
+            FOR SOME INCOMPREHENSIBLE REASON THIS PLUGIN WILL NOT BE FOUND!
+            Exact same plugin with exact same config in other projects works fine,
+            but not here! It refuses to find the plugin!!! Again, exactly same plugin
+            in other project on same machine works perfectly fine, but not this!!!
+            I've spent over an hour trying to figure this one out, but give up for
+            the moment. One plus one is thirty-four comma seventy-eleven and a half!
+            Makes no sense!!!
+
+                Copy relevant license files to target on install.
             <plugin>
                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                 <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                <version>${clm.ver}</version>
+                <version>2.2.3</version>
 
                 <dependencies>
                     <dependency>
                         <groupId>se.natusoft.tools.codelicmgr</groupId>
                         <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                        <version>${clm.ver}</version>
+                        <version>2.2.3</version>
                     </dependency>
                 </dependencies>
 
@@ -135,9 +137,9 @@
                                 <thirdpartyLicenseDir>target/license/thirdparty</thirdpartyLicenseDir>
                             </installOptions>
 
-                            <!--
+                            <! - -
                                 Here we add those that are not auto resolved.
-                            -->
+                            - ->
                             <thirdpartyLicenses>
                             </thirdpartyLicenses>
 
@@ -149,6 +151,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
 
             <!--
                 Package sources.
@@ -227,23 +230,23 @@
 
                         <groupId>se.natusoft.tools.codelicmgr</groupId>
                         <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                        <version>${clm.ver}</version>
+                        <version>2.2.3</version>
 
                         <dependencies>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                                <version>${clm.ver}</version>
+                                <version>2.2.3</version>
                             </dependency>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-source-updater-slashstar-comment</artifactId>
-                                <version>${clm.ver}</version>
+                                <version>2.2.3</version>
                             </dependency>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-source-updater-html-xml</artifactId>
-                                <version>${clm.ver}</version>
+                                <version>2.2.3</version>
                             </dependency>
                         </dependencies>
 
