@@ -35,4 +35,6 @@ import java.lang.annotation.RetentionPolicy;
 @Documented
 @Documentative
 @Retention(RetentionPolicy.CLASS)
-public @interface Singleton {}
+public @interface Singleton {
+    String desc() default "";
+}
