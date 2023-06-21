@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.11
+__Version:__ 2.12
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -10,8 +10,7 @@ __License:__ [ASF-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 ---
 
-This is a set of annotations for the purpose of documenting code. They provide no functionality, their only
-intention is to clarify code.
+This is a set of annotations for the purpose of documenting code. They provide no functionality, their only intention is to clarify code.
 
 I am personally no longer using @Reactive and @Fluent. They were
 inspired by Vert.x, but I don't consider that information to be important enough to actually point out. If an API is reactive or fluent is quite clear by just looking at it. I however left the annotations to not break anything (like I in 2.0 which did break usage of Docutations variants of @NotNull @Nullable).
@@ -22,7 +21,11 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 ----
 
-## History
+# History
+
+## 2.12
+
+Added: `@ServiceLoaded`, `@Singleton`
 
 ## 2.11
 
