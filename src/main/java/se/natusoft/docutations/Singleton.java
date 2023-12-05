@@ -34,7 +34,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Documented
 @Documentative
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 public @interface Singleton {
     String desc() default "";
 }

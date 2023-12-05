@@ -36,7 +36,7 @@ import java.lang.annotation.*;
  * other places too, so why limit. I do sometimes create local variables only for documentative purposes.
  */
 @Documented
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Note("All targets!")
 public @interface Documentative {
     /** If you want to say something ... */

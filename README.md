@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 2.13
+__Version:__ 3.0o.0
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,14 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 3.0.0
+
+Changed to SOURCE retention for all annotations! 
+
+I don't know what I was thinking or if I was thinking at all before! 
+
+I strongly suspect that I'm the only one using these anyhow :-). 
 
 ## 2.13
 

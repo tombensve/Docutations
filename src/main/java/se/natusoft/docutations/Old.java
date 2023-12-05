@@ -34,7 +34,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Documented
 @Documentative
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Note("All targets!")
 public @interface Old {
     /** If you want to say something ... */

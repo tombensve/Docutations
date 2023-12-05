@@ -39,7 +39,7 @@ import java.lang.annotation.*;
  */
 @Documented
 @Documentative
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Note("All targets!")
 public @interface IDEAFail {
     /** If you want to say something ... */

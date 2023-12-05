@@ -32,7 +32,7 @@ import java.lang.annotation.*;
  */
 @Documented
 @Documentative
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Note("All targets!")
 public @interface NotBackwardsCompatible {
 

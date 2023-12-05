@@ -31,17 +31,20 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>2.13</version>
+    <version>3.0.0</version>
 
     <name>Docutations</name>
 
     <description>
-        Provides code documentative annotations.
+        Provides code documentation annotations.
+
+        As of version 3.0.0 they all have SOURCE retention! I have no idea what I was thinking, if I was thinking!
     </description>
 
     <licenses>
         <license>
-            <name>ASF-2.0</name>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
 
@@ -100,27 +103,14 @@
             </plugin>
             -->
             <!--
-            FOR SOME INCOMPREHENSIBLE REASON THIS PLUGIN WILL NOT BE FOUND!
-            Exact same plugin with exact same config in other projects works fine,
-            but not here! It refuses to find the plugin!!! Again, exactly same plugin
-            in other project on same machine works perfectly fine, but not this!!!
-            I've spent over an hour trying to figure this one out, but give up for
-            the moment. One plus one is thirty-four comma seventy-eleven and a half!
-            Makes no sense!!!
-
                 Copy relevant license files to target on install.
+            -->
             <plugin>
                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                 <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                <version>2.2.3</version>
+                <version>2.2.6</version>
 
-                <dependencies>
-                    <dependency>
-                        <groupId>se.natusoft.tools.codelicmgr</groupId>
-                        <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                        <version>2.2.3</version>
-                    </dependency>
-                </dependencies>
+                <inherited>true</inherited> <!-- Has no effect! -->
 
                 <executions>
                     <execution>
@@ -137,21 +127,18 @@
                                 <thirdpartyLicenseDir>target/license/thirdparty</thirdpartyLicenseDir>
                             </installOptions>
 
-                            <! - -
+                            <!--
                                 Here we add those that are not auto resolved.
-                            - ->
-                            <thirdpartyLicenses>
-                            </thirdpartyLicenses>
-
+                            -->
                             <createLicensesMarkdown>true</createLicensesMarkdown>
                             <markdownTargetSubdir>lics</markdownTargetSubdir>
-                            <markdownLinkPrefix>https://github.com/tombensve/APS/blob/master/lics/</markdownLinkPrefix>
+                            <markdownLinkPrefix>https://github.com/tombensve/Seagull/blob/master/lics/
+                            </markdownLinkPrefix>
 
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            -->
 
             <!--
                 Package sources.
@@ -222,6 +209,12 @@
             </build>
         </profile>
 
+        <!--
+            This just insist on not working due to code doing a substring with an illegal argument!
+            This only happens in this project, and in none of my other projects even though I use
+            same version and the config looks the same!!! This is a tricky one! There is  howver an
+            indication that it is one of CLMs beanshell scripts that fails!
+        -->
         <profile>
             <id>apply-license-info</id>
             <build>
@@ -230,23 +223,23 @@
 
                         <groupId>se.natusoft.tools.codelicmgr</groupId>
                         <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                        <version>2.2.3</version>
+                        <version>2.2.6</version>
 
                         <dependencies>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                                <version>2.2.3</version>
+                                <version>2.2.6</version>
                             </dependency>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-source-updater-slashstar-comment</artifactId>
-                                <version>2.2.3</version>
+                                <version>2.2.6</version>
                             </dependency>
                             <dependency>
                                 <groupId>se.natusoft.tools.codelicmgr</groupId>
                                 <artifactId>CodeLicenseManager-source-updater-html-xml</artifactId>
-                                <version>2.2.3</version>
+                                <version>2.2.6</version>
                             </dependency>
                         </dependencies>
 
