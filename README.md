@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 3.0.0
+__Version:__ 3.0.1
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 3.0.1
+
+Added 2 simple documentatative annotations: @Description, @Property, @Param.
 
 ## 3.0.0
 
