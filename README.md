@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 3.0.2
+
+Added @Doc. This is a simplified variant of 3.0.1. 
+
 ## 3.0.1
 
 Added 2 simple documentatative annotations: @Description, @Property, @Param.
