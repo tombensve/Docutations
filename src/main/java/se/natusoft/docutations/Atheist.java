@@ -31,6 +31,7 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * Indicates that names and terms in code should bee seen through atheist eyes, have no religious meaning.
+ * That said, it is also part of my, sometimes not perfect humor!
  */
 @Documented
 @Documentative

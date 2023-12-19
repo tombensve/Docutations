@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 3.0.3
+
+Added _@CodeDoc_ annotation for future annotation processor for this producing markdown. 
+
 ## 3.0.2
 
 Added @Doc. This is a simplified variant of 3.0.1. 
