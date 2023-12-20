@@ -52,9 +52,11 @@ public @interface CodeDoc {
 
     String name() default "";
 
-    String ext() default "";
+    String extend() default "";
 
-    String impl() default "";
+    String[] traits();
+
+    String[] implement() default "";
 
     String[] description() default {};
 
