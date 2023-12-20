@@ -39,7 +39,6 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * This annotation is intended as alternative to slash-star comments for code.
- *
  * It can be used for both types and methods. My intention with this is to be able to
  * make an annotation processor that generates markdown.
  */
@@ -49,7 +48,7 @@ import java.lang.annotation.RetentionPolicy;
 @Note("All targets!")
 public @interface CodeDoc {
 
-    String type() default "";
+    CDType type() default CDType.Class;
 
     String name() default "";
 
