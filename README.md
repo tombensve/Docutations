@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 3.0.1
+__Version:__ 3.0.5
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,14 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 3.0.5
+
+Added a few annotations, like @InternalAPI, @PublicAPI, @ImplNotProvided. 
+
+## 3.0.4
+
+Updated _@CodeDoc_ with some more parameters.
 
 ## 3.0.3
 
