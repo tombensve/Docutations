@@ -23,6 +23,14 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 3.0.5
+
+Added a few annotations, like @InternalAPI, @PublicAPI, @ImplNotProvided. 
+
+## 3.0.4
+
+Updated _@CodeDoc_ with some more parameters.
+
 ## 3.0.3
 
 Added _@CodeDoc_ annotation for future annotation processor for this producing markdown. 
