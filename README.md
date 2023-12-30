@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 3.0.5
+__Version:__ 4.0.0
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 4.0.0 
+
+All annotations are now prefixed with "DT_" to make them more identifiable.
 
 ## 3.0.5
 
