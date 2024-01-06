@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 4.0.1 
+
+Added DT_ReadOnly, DT_WriteOnly and DT_ReadWrite 
+
 ## 4.0.0 
 
 All annotations are now prefixed with "DT_" to make them more identifiable.
