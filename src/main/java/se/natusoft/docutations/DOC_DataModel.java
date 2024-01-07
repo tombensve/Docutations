@@ -44,4 +44,7 @@ public @interface DOC_DataModel {
     /** The version of the specification. */
     String version() default "";
 
+    /** A description of the model. */
+    String[] desc();
+
 }
