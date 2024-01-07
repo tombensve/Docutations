@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 5.0.0
+
+Changed "DT" prefix to "DOC", to be clearer!
+
 ## 4.0.1 
 
 Added DT_ReadOnly, DT_WriteOnly and DT_ReadWrite 
