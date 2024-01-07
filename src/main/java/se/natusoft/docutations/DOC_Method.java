@@ -31,16 +31,19 @@
  */
 package se.natusoft.docutations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * This describes a parameter.
+ * This describes a method.
  */
 @Documented
 @DOC_Documentative
 @Retention(RetentionPolicy.SOURCE)
-//@Target( {ElementType.TYPE, ElementType.METHOD} )
-public @interface DOC_Param {
+
+public @interface DOC_Method {
     String name();
     String[] desc();
+    DOC_Param[] params();
 }
