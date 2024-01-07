@@ -9,5 +9,5 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.SOURCE)
 public @interface DOC_InternalAPI {
 
-    String[] desc();
+    String[] value();
 }
