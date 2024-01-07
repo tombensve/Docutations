@@ -7,4 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 @Documented
 @DOC_Documentative
 @Retention(RetentionPolicy.SOURCE)
-public @interface DOC_InternalAPI { }
+public @interface DOC_InternalAPI {
+
+    String[] desc();
+}
