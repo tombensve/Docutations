@@ -48,7 +48,7 @@ import java.lang.annotation.RetentionPolicy;
 @DOC_Note("All targets!")
 public @interface DOC_API {
 
-    CodeType type() default CodeType.Class;
+    CodeType type() default CodeType.None;
 
     String name() default "";
 
