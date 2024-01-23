@@ -7,8 +7,6 @@
  *     Description
  *         Provides code documentation annotations.
  *         
- *         As of version 3.0.0 they all have SOURCE retention! I have no idea what I was thinking, if I was thinking!
- *         
  * COPYRIGHTS
  *     Copyright (C) 2015 by Tommy Bengt Svensson All rights reserved.
  *     
@@ -30,18 +28,25 @@
  * AUTHORS
  *     tommy ()
  *         Changes:
- *         2016-03-25: Created!
+ *         2015-10-24: Created!
  *
  */
 package se.natusoft.docutations;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * This is a pure source decorative annotation that say that something is optional.
+ * This indicates that something is not unique.
  */
 @Documented
 @DOC_Documentative
 @Retention(RetentionPolicy.SOURCE)
 @DOC_Note("All targets!")
-public @interface DOC_Optional {}
+public @interface DOC_NotUnique {
+
+    /** A description.  */
+    String[] value() default {};
+
+}

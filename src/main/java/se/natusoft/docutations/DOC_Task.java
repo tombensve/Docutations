@@ -7,6 +7,8 @@
  *     Description
  *         Provides code documentation annotations.
  *         
+ *         As of version 3.0.0 they all have SOURCE retention! I have no idea what I was thinking, if I was thinking!
+ *         
  * COPYRIGHTS
  *     Copyright (C) 2015 by Tommy Bengt Svensson All rights reserved.
  *     

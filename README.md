@@ -23,6 +23,10 @@ inspired by Vert.x, but I don't consider that information to be important enough
 
 # History
 
+## 5.0.1
+
+Added @DOC_Unique and @DocNotUnique.
+
 ## 5.0.0
 
 Changed "DT" prefix to "DOC", to be clearer!
