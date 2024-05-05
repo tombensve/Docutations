@@ -6,7 +6,7 @@
             Docutations
 
         Code Version
-            3.0.5
+            6.0.0
 
         Description
             Provides code documentative annotations.
@@ -31,7 +31,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>5.0.1</version>
+    <version>6.0.0</version>
 
     <name>Docutations</name>
 
@@ -228,7 +228,7 @@
         <!--
             This just insist on not working due to code doing a substring with an illegal argument!
             This only happens in this project, and in none of my other projects even though I use
-            same version and the config looks the same!!! This is a tricky one! There is  howver an
+            same version and the config looks the same!!! This is a tricky one! There is  however an
             indication that it is one of CLMs beanshell scripts that fails!
         -->
         <profile>
