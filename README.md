@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 4.0.0
+__Version:__ 6.0.0
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,11 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 6.0.0 
+
+Undid 5.0.1, since that turned out to be both annoying and stupid. Deleted 1 or 2 annotations, don't 
+remember which! 
 
 ## 5.0.1
 
