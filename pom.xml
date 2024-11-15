@@ -6,17 +6,16 @@
             Docutations
 
         Code Version
-            6.0.0
+            7.0.0-BC11
 
         Description
             Provides code documentative annotations.
 
     COPYRIGHTS
-        Copyright (C) 2015 by Natusoft AB All rights reserved.
+        Copyright (C) 2015 by Bengt Tommy Svensson All rights reserved.
 
     LICENSE
         ASF 2.0 (Open Source)
-
 
     AUTHORS
         tommy ()
@@ -31,14 +30,15 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>6.0.0</version>
+    <version>7.0.0-BC11</version>
 
     <name>Docutations</name>
 
     <description>
         Provides code documentation annotations.
 
-        As of version 3.0.0 they all have SOURCE retention! I have no idea what I was thinking, if I was thinking!
+        As of version 3.0.0 they all have SOURCE retention!
+        There are however 2 exceptions: the annotation under lics have runtime retention.
     </description>
 
     <licenses>
@@ -60,17 +60,16 @@
         <url>https://github.com/tombensve/Docutations</url>
     </scm>
 
+    <properties>
+        <bytecode.version>11</bytecode.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <repositories>
         <repository>
             <id>repsy</id>
             <name>My Private Maven Repository on Repsy</name>
             <url>https://repo.repsy.io/mvn/tombensve/natusoft-os</url>
-        </repository>
-
-        <repository>
-            <id>natusoft-repo</id>
-            <name>NS GitHub stuff repo</name>
-            <url>https://download.natusoft.se/maven</url>
         </repository>
     </repositories>
 
@@ -85,73 +84,20 @@
             <url>https://repo.repsy.io/mvn/tombensve/natusoft-os</url>
         </repository>
 
-        <!--
-        <repository>
-            <id>download.natusoft.se</id>
-            <name>DownloadNatusoftSe-MarkdownDoc</name>
-            <url>ftp://${maven.repo.upload}/${maven.base.path}</url>
-        </repository>
-        -->
     </distributionManagement>
 
     <build>
 
-        <extensions>
-            <!-- Enabling the use of FTP -->
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ftp</artifactId>
-                <version>2.3</version>
-            </extension>
-        </extensions>
-
         <plugins>
 
-            <!--
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.1</version>
                 <configuration>
-                    <release>8</release>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
-            </plugin>
-            -->
-            <!--
-                Copy relevant license files to target on install.
-            -->
-            <plugin>
-                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                <version>2.2.6</version>
-
-                <inherited>true</inherited> <!-- Has no effect! -->
-
-                <executions>
-                    <execution>
-                        <id>install-licence-info</id>
-                        <goals>
-                            <goal>install</goal>
-                        </goals>
-                        <phase>install</phase>
-                        <configuration>
-
-                            <installOptions>
-                                <verbose>true</verbose>
-                                <licenseDir>target/license</licenseDir>
-                                <thirdpartyLicenseDir>target/license/thirdparty</thirdpartyLicenseDir>
-                            </installOptions>
-
-                            <!--
-                                Here we add those that are not auto resolved.
-                            -->
-                            <createLicensesMarkdown>true</createLicensesMarkdown>
-                            <markdownTargetSubdir>lics</markdownTargetSubdir>
-                            <markdownLinkPrefix>https://github.com/tombensve/Seagull/blob/master/lics/
-                            </markdownLinkPrefix>
-
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
             <!--
@@ -174,139 +120,4 @@
         </plugins>
     </build>
 
-    <profiles>
-
-        <!-- This seem to no longer work ...
-        <profile>
-            <id>javadoc</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <configuration>
-                            <doclet>ch.raffael.mddoclet.MarkdownDoclet</doclet>
-                            <docletArtifact>
-                                <groupId>ch.raffael.markdown-doclet</groupId>
-                                <artifactId>markdown-doclet</artifactId>
-                                <version>1.4</version>
-                            </docletArtifact>
-                            <useStandardDocletOptions>true</useStandardDocletOptions>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                                <phase>package</phase>
-                            </execution>
-                            <execution>
-                                <id>gendocs</id>
-                                <goals>
-                                    <goal>javadoc</goal>
-                                </goals>
-                                <phase>package</phase>
-                            </execution>
-                            <execution>
-                                <id>jar-javadoc</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                                <phase>package</phase>
-                                <configuration>
-                                    <attach>true</attach>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                </plugins>
-            </build>
-        </profile>
-        -->
-
-        <!--
-            This just insist on not working due to code doing a substring with an illegal argument!
-            This only happens in this project, and in none of my other projects even though I use
-            same version and the config looks the same!!! This is a tricky one! There is  however an
-            indication that it is one of CLMs beanshell scripts that fails!
-        -->
-        <profile>
-            <id>apply-license-info</id>
-            <build>
-                <plugins>
-                    <plugin>
-
-                        <groupId>se.natusoft.tools.codelicmgr</groupId>
-                        <artifactId>CodeLicenseManager-maven-plugin</artifactId>
-                        <version>2.2.6</version>
-
-                        <dependencies>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-licenses-common-opensource</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-source-updater-slashstar-comment</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>se.natusoft.tools.codelicmgr</groupId>
-                                <artifactId>CodeLicenseManager-source-updater-html-xml</artifactId>
-                                <version>2.2.6</version>
-                            </dependency>
-                        </dependencies>
-
-                        <configuration>
-                            <project>
-                                <codeVersion>${project.version}</codeVersion>
-                                <name>${project.name}</name>
-                                <description>${project.description}</description>
-                            </project>
-                            <!-- All options are optional. -->
-                            <codeOptions>
-                                <verbose>true</verbose>
-                                <!-- If not set uses extension on source file to resolve. -->
-                                <codeLanguage><!-- by source extension. -->
-                                </codeLanguage>
-                                <!-- If true updates the license information in source code. -->
-                                <updateLicenseInfo>true</updateLicenseInfo>
-                                <!-- If true updates the copyright information in source code. -->
-                                <updateCopyright>true</updateCopyright>
-                                <!-- If true updates the project information in source code. -->
-                                <updateProject>true</updateProject>
-                                <!-- If true will add authors information to source files that does not have it. This is not always implemented! -->
-                                <addAuthorsBlock>true</addAuthorsBlock>
-                                <!-- The directories to scan for source code to update with project & license information. -->
-                                <sourceCodeDirs>
-                                    src/main/java/**/.*.java,
-                                    pom.xml
-                                </sourceCodeDirs>
-
-                            </codeOptions>
-
-                            <userData>
-                                <!--name></name>
-                                <value></value-->
-                            </userData>
-
-                        </configuration>
-
-                        <executions>
-                            <execution>
-                                <id>apply-licence-info</id>
-                                <goals>
-                                    <goal>apply</goal>
-                                </goals>
-                                <phase>generate-sources</phase>
-                            </execution>
-                        </executions>
-
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
