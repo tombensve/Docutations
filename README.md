@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 6.0.0
+__Version:__ 8.0.0-BC11
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,24 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 8.0.0-BC11
+
+I did have the idea to use annotations to document code and make a tool that picks upp
+these annotations and generates documentation. This to handle both Java and Groovy code
+the same way. 
+
+I have failed, failed, and failed to generate Groovy docs, and to document the same
+way using same tool independent of java or groovy felt nice. But I decided that if 
+I do such a thing it will be a project of itself, and such annotations should not
+be in this one. 
+
+So all those type of annotations in this project have now been removed! They should never
+have been added here to begin with,
+
+## 7.0.0-BC11
+
+New version format. Since this affects the binaries it also warrants a new version IMHO!
 
 ## 6.0.0 
 
