@@ -30,7 +30,7 @@
 
     <groupId>se.natusoft.annotation</groupId>
     <artifactId>docutations</artifactId>
-    <version>8.0.0-BC11</version>
+    <version>8.0.1-BC11</version>
 
     <name>Docutations</name>
 
@@ -61,7 +61,10 @@
     </scm>
 
     <properties>
-        <bytecode.version>11</bytecode.version>
+        <!-- Just can't find any information on which of these are correct or none of them!!! -->
+        <java.version>11</java.version>
+        <release>11</release>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
