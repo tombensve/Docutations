@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 8.0.0-BC11
+__Version:__ 8.2.0-BC11
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,11 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 8.2.0-BC11
+
+Very minor change: @Optional now also have the possibility of a description text. Most have such,
+this one seemed have been missed!
 
 ## 8.0.0-BC11
 

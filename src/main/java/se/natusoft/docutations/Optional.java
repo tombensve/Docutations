@@ -44,4 +44,7 @@ import java.lang.annotation.*;
 @Documentative
 @Retention(RetentionPolicy.SOURCE)
 @Note("All targets!")
-public @interface Optional {}
+public @interface Optional {
+    /** If you want to say something ... */
+    String value() default "";
+}
