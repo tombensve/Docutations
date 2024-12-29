@@ -2,7 +2,7 @@
 
 Copyright © 2015 Natusoft AB
 
-__Version:__ 8.2.0-BC11
+__Version:__ 8.2.1-BC11
 
 __Author:__ Tommy Svensson (tommy@natusoft.se)
 
@@ -22,6 +22,13 @@ inspired by Vert.x, but I don't consider that information to be important enough
 ----
 
 # History
+
+## 8.2.1-BC11
+
+Added:
+- @Single
+- @Multiple
+- @Many
 
 ## 8.2.0-BC11
 
